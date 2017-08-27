@@ -17,7 +17,7 @@ while True:
     list.remove(dealer1)
     list.remove(dealer2)
     print ("The dealer's card is", dealer1, "and your cards are", a,"and", str(b)+".  ")
-    x = input("Type 'hit', 'stand', or 'double down.")
+    x = input("Type 'hit' or 'stand'.")
     if x == 'quit':
         print ("Thanks for playing!")
         break
