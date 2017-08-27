@@ -1,10 +1,20 @@
 import random
-list = [1,2,3,4,5,6,7,8,9,10,11,
-        1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11]
+#list = [1,2,3,4,5,6,7,8,9,10,11,
+#        1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11]
+list1 = [i for i in range(1,12)]
+list2 = [i for i in range(1,12)]
+
+list = []
+list.extend(list1[:])
+list.extend(list2[:])
+
+print (list)
+
 
 print ("Welcome to Blackjack! ^^ My name is Luna and I will be your dealer for today.\nType 'quit' anytime if you would like to quit.")
 
 while True:
+    print ('\nNew Game')
     if len(list) == 4 or len(list) < 4:
         print ("out of cards")
         break
@@ -16,7 +26,7 @@ while True:
     list.remove(b)
     list.remove(dealer1)
     list.remove(dealer2)
-    print ("The dealer's card is", dealer1, "and your cards are", a,"and", str(b)+".  ")
+    print ("The dealer's up card is", dealer1, "and your cards are\n", a,"and", str(b)+".  ")
     x = input("Type 'hit' or 'stand'.")
     if x == 'quit':
         print ("Thanks for playing!")
@@ -29,25 +39,31 @@ while True:
         continue
     playersum = a + b
     while True:
-        if x == 'hit':
+        if x == 'h':
             hit = random.choice(list)
             list.remove(hit)
-            print (hit)
-        if x == 'stand':
+            print ("your new card:",hit, "your new total:", playersum + hit)
+        if x == 's':
             print ('dealers cards are', dealer1,dealer2)
             print ('playersum =', playersum)
             break
         playersum += hit
         if playersum > 21:
-            print ('bust')
+            print ('bust, dealer wins')
             break
         x = input('hit or stand?')
+    if playersum > 21:
+        continue
     dealersum = dealer1 + dealer2
     print ("Dealer's cards:", dealer1,dealer2)
-    while dealersum > 16:
+    while True:
+        if dealersum > 16:
+            break
+        if dealersum > 21:
+            break
         dealerhit = random.choice(list)
         list.remove(dealerhit)
-        print (dealerhit)
+        print ("the dealer hit and got:",dealerhit)
         dealersum += dealerhit
     print ('dealer total:', dealersum)
     if dealersum > 21:
@@ -64,5 +80,7 @@ to do list
 
 aces, kings, and queens 
 double down and split
+suits (spades, hearts, clubs, diamonds)
+change 'hit' and 'stand' to 'h' and 's'
 
 '''
