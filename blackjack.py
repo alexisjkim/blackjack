@@ -1,80 +1,89 @@
 import random
-#list = [1,2,3,4,5,6,7,8,9,10,11,
-#        1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11]
-list1 = [i for i in range(1,12)]
-list2 = [i for i in range(1,12)]
+list = [1,2,3,4,5,6,7,8,9,10,10,10,
+       1, 2, 3, 4, 5, 6, 7, 8, 9, 10,10,10,
+        1,2,3,4,5,6,7,8,9,10,10,10,
+        1,2,3,4,5,6,7,8,9,10,10,10]
 
-list = []
-list.extend(list1[:])
-list.extend(list2[:])
-
-print (list)
+suit = ['club', 'diamond', 'heart', 'spade']
 
 
 print ("Welcome to Blackjack! ^^ My name is Luna and I will be your dealer for today.\nType 'quit' anytime if you would like to quit.")
 
+wins = 0
+losses = 0
 while True:
+    dealersuit = random.choice(suit)
+    print ("wins, losses:", wins, losses)
     print ('\nNew Game')
     if len(list) == 4 or len(list) < 4:
-        print ("out of cards")
-        break
-    a = random.choice(list)
-    b = random.choice(list)
-    dealer1 = random.choice(list)
-    dealer2 = random.choice(list)
-    list.remove(a)
-    list.remove(b)
-    list.remove(dealer1)
-    list.remove(dealer2)
-    print ("The dealer's up card is", dealer1, "and your cards are\n", a,"and", str(b)+".  ")
+        print ("out of cards, shuffling")
+        list.shuffle()
+        continue
+    length = len(list)-1
+    a = list[length]
+    b = list[length-1]
+    dealer1 = list[length-2]
+    dealer2 = list[length-3]
+    list.pop()
+    list.pop()
+    list.pop()
+    print ("The dealer's up card is", dealer1, random.choice(suit), "and your cards are\n", a,random.choice(suit),"and", str(b),random.choice(suit)+".  ")
     x = input("Type 'hit' or 'stand'.")
     if x == 'quit':
         print ("Thanks for playing!")
         break
     if a + b == 21:
         print ("You got a blackjack!")
+        wins += 1
         continue
     if dealer1 + dealer2 == 21:
         print ("I got a blackjack!")
-        continue
-    playersum = a + b
     while True:
         if x == 'h':
-            hit = random.choice(list)
-            list.remove(hit)
-            print ("your new card:",hit, "your new total:", playersum + hit)
+            hit = list[len(list)-1]
+            list.pop()
+            print ("your new card:",hit,random.choice(suit), "your pl new total:" + hit)
         if x == 's':
-            print ('dealers cards are', dealer1,dealer2)
-            print ('playersum =', playersum)
-            break
+            losses += 1
+            continue
+        playersum = a + b
+        print ('dealers cards are', dealer1,dealer2)
+        print ('playersum =', playersum)
+        break
         playersum += hit
         if playersum > 21:
             print ('bust, dealer wins')
+            losses += 1
             break
         x = input('hit or stand?')
     if playersum > 21:
+        print ('you busted')
+        losses += 1
         continue
     dealersum = dealer1 + dealer2
-    print ("Dealer's cards:", dealer1,dealer2)
+    print ("Dealer's cards:", dealer1,dealersuit, dealer2, random.choice(suit))
     while True:
         if dealersum > 16:
             break
         if dealersum > 21:
             break
-        dealerhit = random.choice(list)
-        list.remove(dealerhit)
-        print ("the dealer hit and got:",dealerhit)
+        dealerhit = list[len(list)-1]
+        list.pop()
+        print ("the dealer hit and got:",dealerhit, random.choice(suit))
         dealersum += dealerhit
     print ('dealer total:', dealersum)
     if dealersum > 21:
         print ("dealer busted")
+        wins += 1
     if dealersum < 22:
         if dealersum > playersum:
             print ("dealer wins!")
+            losses += 1
         if dealersum == playersum:
             print ('push')
         if dealersum < playersum:
             print ('you win')
+            wins += 1
 '''
 to do list
 
