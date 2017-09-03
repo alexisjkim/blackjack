@@ -1,25 +1,28 @@
 import random
 decks = eval(input("How many decks would you like?"))
-onedeck = [1,2,3,4,5,6,7,8,9,10,'J','Q','K',]
-list = []
 
-for i in range(decks):
-    list.extend(onedeck)
+def deck(n):
+    onedeck = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 'J', 'Q', 'K']
+    alldecks = []
+    for i in range(n):
+        alldecks.extend(onedeck)
+    return alldecks
 
-print (list)
-
+list = deck(decks)
 random.shuffle(list)
 
 print ("Welcome to Blackjack! ^^ My name is Luna and I will be your dealer for today.\nType 'quit' anytime if you would like to quit.")
 
 wins = 0
 losses = 0
+
 while True:
     print ("wins, losses:", wins, losses)
     print ('\nNew Game')
     if len(list) == 4 or len(list) < 4:
         print ("out of cards, shuffling")
-        list.shuffle()
+        list = deck(decks)
+        random.shuffle(list)
         continue
     a = list.pop()
     b = list.pop()
