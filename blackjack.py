@@ -1,8 +1,13 @@
 import random
-list = [1,2,3,4,5,6,7,8,9,10,'J','Q','K',
-       1, 2, 3, 4, 5, 6, 7, 8, 9,10, 'J','Q','K',
-        1,2,3,4,5,6,7,8,9,10,'J','Q','K',
-        1,2,3,4,5,6,7,8,9,10,'J','Q','K']
+decks = eval(input("How many decks would you like?"))
+onedeck = [1,2,3,4,5,6,7,8,9,10,'J','Q','K',]
+list = []
+
+for i in range(decks):
+    list.extend(onedeck)
+
+print (list)
+
 random.shuffle(list)
 
 print ("Welcome to Blackjack! ^^ My name is Luna and I will be your dealer for today.\nType 'quit' anytime if you would like to quit.")
