@@ -23,8 +23,8 @@ while True:
     b = list.pop()
     dealer1 = list.pop()
     dealer2 = list.pop()
-    print ("The dealer's up card is", dealer1, random.choice(suit), "and your cards are\n", a,random.choice(suit),"and", str(b),random.choice(suit)+".  ")
-    x = input("Type 'hit' or 'stand'.")
+    print ("The dealer's up card is", dealer1, "and your cards are\n", a,random.choice(suit),"and", str(b),random.choice(suit)+".  ")
+    x = input("Type 'hit' or 'stand' or 'cheat mode.'")
     if x == 'quit':
         print ("Thanks for playing!")
         break
@@ -36,6 +36,8 @@ while True:
         print ("I got a blackjack!")
     playersum = a + b
     while True:
+        if x == 'cheat' or x == 'c':
+            print (list[::-1])
         if x == 'h' or x == 'hit':
             hit = list.pop()
             playersum += hit
