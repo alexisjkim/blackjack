@@ -2,7 +2,10 @@ import random
 decks = eval(input("How many decks would you like?"))
 
 def deck(n):
-    onedeck = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 'J', 'Q', 'K']
+    onedeck = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 'J', 'Q', 'K',
+               1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 'J', 'Q', 'K',
+               1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 'J', 'Q', 'K',
+               1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 'J', 'Q', 'K']
     alldecks = []
     for i in range(n):
         alldecks.extend(onedeck)
