@@ -18,10 +18,19 @@ print ("Welcome to Blackjack! ^^ My name is Luna and I will be your dealer for t
 
 wins = 0
 losses = 0
+yourcoins = 5000
 
 while True:
     print ("wins, losses:", wins, losses)
     print ('\nNew Game')
+    print ("You have",yourcoins,"coins.\n")
+    while True:
+        bet = eval(input("How many coins would you like to bet?"))
+        if bet > yourcoins:
+            print ("Sorry, that's too high.")
+        if bet < yourcoins or bet == yourcoins:
+            break
+    yourcoins = yourcoins - bet
     if len(list) == 4 or len(list) < 4:
         print ("out of cards, shuffling")
         list = deck(decks)
@@ -55,10 +64,11 @@ while True:
     if a + b == 21:
         print ("You got a blackjack!")
         wins += 1
+        yourcoins += bet*2
         continue
     if dealer1 + dealer2 == 21:
         print ("I got a blackjack!")
-
+        continue
     playersum = a + b
     while True:
         if x == 'cheat' or x == 'c':
@@ -99,6 +109,8 @@ while True:
     if dealersum > 21:
         print ("dealer busted")
         wins += 1
+        continue
+        yourcoins += bet*2
     if dealersum < 22:
         if dealersum > playersum:
             print ("dealer wins!")
@@ -108,6 +120,7 @@ while True:
         if dealersum < playersum:
             print ('you win')
             wins += 1
+            yourcoins += bet*2
 '''
 to do list
 
