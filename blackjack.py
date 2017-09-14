@@ -21,6 +21,8 @@ losses = 0
 yourcoins = 5000
 
 while True:
+    if yourcoins == 0:
+        print ("Haha you're out of money lol")
     print ("wins, losses:", wins, losses)
     print ('\nNew Game')
     print ("You have",yourcoins,"coins.\n")
