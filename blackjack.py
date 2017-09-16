@@ -2,10 +2,10 @@ import random
 decks = eval(input("How many decks would you like?"))
 
 def deck(n):
-    onedeck = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 'J', 'Q', 'K',
-               1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 'J', 'Q', 'K',
-               1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 'J', 'Q', 'K',
-               1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 'J', 'Q', 'K']
+    onedeck = [2, 3, 4, 5, 6, 7, 8, 9, 10, 'J', 'Q', 'K','A',
+               2, 3, 4, 5, 6, 7, 8, 9, 10, 'J', 'Q', 'K','A',
+               2, 3, 4, 5, 6, 7, 8, 9, 10, 'J', 'Q', 'K','A',
+               2, 3, 4, 5, 6, 7, 8, 9, 10, 'J', 'Q', 'K','A']
     alldecks = []
     for i in range(n):
         alldecks.extend(onedeck)
@@ -42,6 +42,14 @@ while True:
     b = list.pop()
     dealer1 = list.pop()
     dealer2 = list.pop()
+    if a == 'A':
+        a = 11
+    if b == 'A':
+        b = 11
+    if dealer1 == 'A':
+        dealer1 = 11
+    if dealer2 == 'A':
+        dealer2 = 11
     if a == 'J' or a == 'Q' or a == 'K':
         a = 10
     if b == 'J' or b == 'Q' or b == 'K':
@@ -59,20 +67,30 @@ while True:
         dealer1 = 10
     if dealer2 == 'J' or dealer2 == 'Q' or dealer2 == 'K':
         dealer2 = 10
-    x = input("Type 'hit' or 'stand' or 'cheat mode.'")
+    x = input("Type 'hit', 'stand', 'cheat mode', or 'double down.' ")
     if x == 'quit':
         print ("Thanks for playing!")
         break
     if a + b == 21:
         print ("You got a blackjack!")
         wins += 1
-        yourcoins += bet*2
+        yourcoins += bet*3
         continue
     if dealer1 + dealer2 == 21:
         print ("I got a blackjack!")
         continue
     playersum = a + b
     while True:
+        if x == 'double down' or x == 'dd' or x == 'd':
+            hit = list.pop()
+            if hit == 'J' or hit == 'Q' or hit == 'K':
+                hit = 10
+            if hit == 'A':
+                hit = 11
+            print ('Your new card:', hit)
+            playersum += hit
+            print ("Your new total:", playersum)
+            break
         if x == 'cheat' or x == 'c':
             print (list[::-1])
         if x == 'h' or x == 'hit':
@@ -105,30 +123,30 @@ while True:
         print ("the dealer hit and got:",dealerhit)
         if dealerhit == 'J' or dealerhit == 'Q' or dealerhit == 'K':
             dealerhit = 10
-
+        if dealerhit == 'A':
+            dealerhit = 11
         dealersum += dealerhit
     print ('dealer total:', dealersum)
     if dealersum > 21:
         print ("dealer busted")
         wins += 1
         continue
-        yourcoins += bet*2
+        yourcoins += bet*3
     if dealersum < 22:
         if dealersum > playersum:
             print ("dealer wins!")
             losses += 1
         if dealersum == playersum:
             print ('push')
+            yourcoins += bet
         if dealersum < playersum:
-            print ('you win')
             wins += 1
-            yourcoins += bet*2
+            yourcoins += bet*3
 '''
 to do list
 
 aces, kings, and queens 
 double down and split
 suits (spades, hearts, clubs, diamonds)
-change 'hit' and 'stand' to 'h' and 's'
 
 '''
