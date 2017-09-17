@@ -67,6 +67,8 @@ while True:
         dealer1 = 10
     if dealer2 == 'J' or dealer2 == 'Q' or dealer2 == 'K':
         dealer2 = 10
+    if a == b:
+        x = input ("Type hit, stand, cheat mode, double down, or split.")
     x = input("Type 'hit', 'stand', 'cheat mode', or 'double down.' ")
     if x == 'quit':
         print ("Thanks for playing!")
@@ -81,6 +83,8 @@ while True:
         continue
     playersum = a + b
     while True:
+        if x == 'split':
+            break
         if x == 'double down' or x == 'dd' or x == 'd':
             hit = list.pop()
             if hit == 'J' or hit == 'Q' or hit == 'K':
@@ -107,6 +111,43 @@ while True:
             print ('bust, dealer wins')
             break
         x = input('hit or stand?')
+    if x == 'split':
+        hit = list.pop()
+        hit2 = list.pop()
+        print (a,hit, '\n',b,hit2)
+        if hit == 'J' or hit == 'K' or hit == 'Q':
+            hit = 10
+        if hit2 == 'J' or hit2 == 'Q' or hit2 == 'K':
+            hit = 10
+        if hit == 'A':
+            hit = 11
+        if hit2 == 'A':
+            hit2 = 11
+        split1 = a + hit
+        split2 = b + hit2
+        bet = bet * 2
+        while True:
+            x = input("hit or stand?")
+            if x == 'h' or x == 'hit':
+                hit = list.pop()
+                print ("your new card is", hit)
+                if hit == 'Q' or hit == 'K' or hit == 'J':
+                    hit = 10
+                if hit == 'A':
+                    hit = 11
+                whichone = input ('do you want it on the first or second one')
+                if whichone == '1':
+                    split1 += hit
+                elif whichone == '2':
+                    split2 += hit
+            if x == 's' or x == 'stand':
+                break
+            if split1 > 21:
+                print ("you busted")
+                break
+            if split2 > 21:
+                print("you busted")
+                break
     if playersum > 21:
         print ('you busted')
         losses += 1
