@@ -10,18 +10,21 @@ def deck(n):
         alldecks.extend(onedeck)
     return alldecks
 
-def blackjack(debug):
+def blackjack(debug=False, file=""):
     wins = 0
     losses = 0
     coins = 5000
     print("Welcome to Blackjack! ^^ My name is Luna and I will be your dealer for today.\nType 'quit' anytime if you would like to quit.")
     import random
+    random.seed(1)
+
+
     decks = eval(input("How many decks would you like?"))
     list = deck(decks)
     random.shuffle(list)
 
     if debug == True:
-        f = open('log.txt','w')
+        f = open(file,'w')
         for i in range(10):
             f.write('\n\n')
             f.write(str(i))
@@ -267,7 +270,7 @@ def blackjack(debug):
                 coins += bet
 
 
-a = blackjack(False)
+a = blackjack(debug=True, file="log.txt")
 print (a)
 '''
 to do list
