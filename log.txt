@@ -1,0 +1,121 @@
+
+
+0
+
+player card:10
+player card: 4
+dealer card: 10
+dealer card: 2
+playersum:14dealersum:12
+player hit and got:5
+
+dealer hit and got:2
+
+dealer hit and got:6
+dealer won
+
+
+1
+
+player card:10
+player card: 11
+dealer card: 10
+dealer card: 5
+playersum:21dealersum:15
+
+dealer hit and got:10
+dealer busted
+
+
+2
+
+player card:8
+player card: 3
+dealer card: 10
+dealer card: 9
+playersum:11dealersum:19
+player hit and got:9
+player won
+
+
+3
+
+player card:10
+player card: 8
+dealer card: 11
+dealer card: 2
+playersum:18dealersum:13
+
+dealer hit and got:10
+dealer busted
+
+
+4
+
+player card:10
+player card: 5
+dealer card: 8
+dealer card: 10
+playersum:15dealersum:18
+player hit and got:2
+dealer won
+
+
+5
+
+player card:5
+player card: 10
+dealer card: 7
+dealer card: 8
+playersum:15dealersum:15
+player hit and got:3
+
+dealer hit and got:10
+dealer busted
+
+
+6
+
+player card:4
+player card: 10
+dealer card: 5
+dealer card: 6
+playersum:14dealersum:11
+player hit and got:10
+
+dealer hit and got:7
+player busted
+
+
+7
+
+player card:6
+player card: 10
+dealer card: 7
+dealer card: 10
+playersum:16dealersum:17
+player hit and got:9
+player busted
+
+
+8
+
+player card:10
+player card: 10
+dealer card: 11
+dealer card: 2
+playersum:20dealersum:13
+
+dealer hit and got:10
+dealer busted
+
+
+9
+
+player card:6
+player card: 4
+dealer card: 11
+dealer card: 11
+playersum:10dealersum:22
+player hit and got:10
+dealer busted
