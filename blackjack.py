@@ -1,8 +1,6 @@
-
-import random
-decks = eval(input("How many decks would you like?"))
-
 def deck(n):
+
+
     onedeck = [2, 3, 4, 5, 6, 7, 8, 9, 10, 'J', 'Q', 'K','A',
                2, 3, 4, 5, 6, 7, 8, 9, 10, 'J', 'Q', 'K','A',
                2, 3, 4, 5, 6, 7, 8, 9, 10, 'J', 'Q', 'K','A',
@@ -12,16 +10,16 @@ def deck(n):
         alldecks.extend(onedeck)
     return alldecks
 
-luna = deck(decks)
-random.shuffle(luna)
+def blackjack(debug):
+    wins = 0
+    losses = 0
+    coins = 5000
+    print("Welcome to Blackjack! ^^ My name is Luna and I will be your dealer for today.\nType 'quit' anytime if you would like to quit.")
+    import random
+    decks = eval(input("How many decks would you like?"))
+    list = deck(decks)
+    random.shuffle(list)
 
-print ("Welcome to Blackjack! ^^ My name is Luna and I will be your dealer for today.\nType 'quit' anytime if you would like to quit.")
-
-win = 0
-loss = 0
-coins = 5000
-
-def blackjack(yourcoins,wins,losses,list,debug):
     if debug == True:
         f = open('log.txt','w')
         for i in range(10):
@@ -101,16 +99,16 @@ def blackjack(yourcoins,wins,losses,list,debug):
         done = "done"
         return done
     while True:
-        if yourcoins == 0:
+        if coins == 0:
             print ("Haha you're out of money lol")
         print ("wins, losses:", wins, losses)
         print ('\nNew Game')
-        print ("You have",yourcoins,"coins.\n")
+        print ("You have",coins,"coins.\n")
         while True:
             bet = eval(input("How many coins would you like to bet?"))
-            if bet > yourcoins:
+            if bet > coins:
                 print ("Sorry, that's too high.")
-            if bet < yourcoins or bet == yourcoins:
+            if bet < coins or bet == coins:
                 break
         if len(list) == 4 or len(list) < 4:
             print ("out of cards, shuffling")
@@ -155,10 +153,10 @@ def blackjack(yourcoins,wins,losses,list,debug):
         if a + b == 21:
             print ("You got a blackjack!")
             wins += 1
-            yourcoins += bet*1.5
+            coins += bet*1.5
         if dealer1 + dealer2 == 21:
             print ("I got a blackjack!")
-            yourcoins = yourcoins - bet*1.5
+            coins = coins - bet*1.5
             continue
         playersum = a + b
         while True:
@@ -225,15 +223,15 @@ def blackjack(yourcoins,wins,losses,list,debug):
                     break
                 if split1 > 21:
                     print ("you busted")
-                    yourcoins = yourcoins - bet
+                    coins = coins - bet
                     break
                 if split2 > 21:
                     print("you busted")
-                    yourcoins = yourcoins - bet
+                    coins = coins - bet
                     break
         if playersum > 21:
             print ('you busted')
-            yourcoins = yourcoins - bet
+            coins = coins - bet
             losses += 1
             continue
         dealersum = dealer1 + dealer2
@@ -255,21 +253,21 @@ def blackjack(yourcoins,wins,losses,list,debug):
         if dealersum > 21:
             print ("dealer busted")
             wins += 1
-            yourcoins += bet
+            coins += bet
             continue
         if dealersum < 22:
             if dealersum > playersum:
                 print ("dealer wins!")
-                yourcoins = yourcoins - bet
+                coins = coins - bet
                 losses += 1
             if dealersum == playersum:
                 print ('push')
             if dealersum < playersum:
                 wins += 1
-                yourcoins += bet
+                coins += bet
 
 
-a = blackjack(coins,win,loss,luna,True)
+a = blackjack(False)
 print (a)
 '''
 to do list
