@@ -11,9 +11,9 @@ def deck(n):
     return alldecks
 
 def blackjack(debug=False, file=""):
-    wins = 0
     losses = 0
     coins = 5000
+    wins = 0
     print("Welcome to Blackjack! ^^ My name is Luna and I will be your dealer for today.\nType 'quit' anytime if you would like to quit.")
     import random
     random.seed(1)
@@ -22,49 +22,47 @@ def blackjack(debug=False, file=""):
     decks = eval(input("How many decks would you like?"))
     list = deck(decks)
     random.shuffle(list)
-
+    f = open(file, 'w')
     if debug == True:
-        f = open(file,'w')
         for i in range(10):
-            f.write('\n\n')
-            f.write(str(i))
-            f.write('\n\n')
+            f.write('\n\n' + str(i)+'\n\n')
             a = list.pop()
             b = list.pop()
             dealer1 = list.pop()
             dealer2 = list.pop()
             if a == 'A':
+                f.write("player card"+a+'\n')
                 a = 11
             if b == 'A':
+                f.write("player card"+b+'\n')
                 b = 11
             if dealer1 == 'A':
+                f.write("dealer card:" + dealer1+'\n')
                 dealer1 = 11
             if dealer2 == 'A':
+                f.write("dealer card:"+ dealer2)
                 dealer2 = 11
             if a == 'J' or a == 'Q' or a == 'K':
+                f.write('player card:'+ a+'\n')
                 a = 10
             if b == 'J' or b == 'Q' or b == 'K':
+                f.write('player card:' + b + '\n')
                 b = 10
             if dealer1 == 'J' or dealer1 == 'Q' or dealer1 == 'K':
+                f.write('dealer card:' + dealer1 + '\n')
                 dealer1 = 10
             if dealer2 == 'J' or dealer2 == 'Q' or dealer2 == 'K':
+                f.write('dealer card:' + dealer2 + '\n')
                 dealer2 = 10
+
+            f.write('player card:'+ str(a)+ '\nplayer card: ' + str(b)+'\ndealer card: ')
+            f.write(str(dealer1)+'\ndealer card: '+str(dealer2)+'\n\n')
             playersum = a + b
             dealersum = dealer1 + dealer2
-            f.write('player card:')
-            f.write(str(a))
-            f.write('\nplayer card: ')
-            f.write(str(b))
-            f.write('\ndealer card: ')
-            f.write(str(dealer1))
-            f.write('\ndealer card: ')
-            f.write(str(dealer2))
-            f.write('\n')
             f.write('playersum:')
             f.write(str(playersum))
             f.write('dealersum:')
             f.write(str(dealersum))
-            f.write('\n')
             while playersum < 17:
                 hit = list.pop()
                 if hit == 'J' or hit == 'Q' or hit == 'K':
@@ -104,9 +102,14 @@ def blackjack(debug=False, file=""):
     while True:
         if coins == 0:
             print ("Haha you're out of money lol")
+            f.write("haha you're out of money lol")
+            break
         print ("wins, losses:", wins, losses)
         print ('\nNew Game')
         print ("You have",coins,"coins.\n")
+        f.write("wins, losses:"+ wins+ losses)
+        print('\nNew Game')
+        print("You have", coins, "coins.\n")
         while True:
             bet = eval(input("How many coins would you like to bet?"))
             if bet > coins:
@@ -115,6 +118,7 @@ def blackjack(debug=False, file=""):
                 break
         if len(list) == 4 or len(list) < 4:
             print ("out of cards, shuffling")
+            f.write("\nout of cards, shuffling \n")
             list = deck(decks)
             random.shuffle(list)
             continue
@@ -149,16 +153,23 @@ def blackjack(debug=False, file=""):
             dealer2 = 10
         if a == b:
             x = input ("Type hit, stand, cheat mode, double down, or split.")
-        x = input("Type 'hit', 'stand', 'cheat mode', or 'double down.' ")
+            f.write("Type 'hit', 'stand', or 'cheat mode'. ")
+        elif a != b:
+            x = input("Type 'hit', 'stand', 'cheat mode', or 'double down.' ")
+            f.write("\nType 'hit', 'stand', 'cheat mode', or 'double down.' \n")
+        f.write(str(x))
         if x == 'quit':
-            print ("Thanks for playing!")
+            print("Thanks for playing!")
+            f.write("Thanks for playing!")
             break
         if a + b == 21:
             print ("You got a blackjack!")
+            f.write("You got a blackjack!")
             wins += 1
             coins += bet*1.5
         if dealer1 + dealer2 == 21:
             print ("I got a blackjack!")
+            f.write('\nI got a blackjack.\n')
             coins = coins - bet*1.5
             continue
         playersum = a + b
@@ -173,6 +184,7 @@ def blackjack(debug=False, file=""):
                 if hit == 'A':
                     hit = 11
                 print ('Your new card:', hit)
+                print('Your new card:' + hit)
                 playersum += hit
                 print ("Your new total:", playersum)
                 break
@@ -234,11 +246,13 @@ def blackjack(debug=False, file=""):
                     break
         if playersum > 21:
             print ('you busted')
+            f.write('\nyou busted\n')
             coins = coins - bet
             losses += 1
             continue
         dealersum = dealer1 + dealer2
         print ("Dealer's cards:", dealer1, dealer2)
+        f.write("Dealer's cards:"+ dealer1+' ' + dealer2)
         while True:
             if dealersum > 16:
                 break
@@ -247,6 +261,7 @@ def blackjack(debug=False, file=""):
             dealerhit = list[len(list)-1]
             list.pop()
             print ("the dealer hit and got:",dealerhit)
+            f.write("the dealer hit and got:" + dealerhit)
             if dealerhit == 'J' or dealerhit == 'Q' or dealerhit == 'K':
                 dealerhit = 10
             if dealerhit == 'A':
@@ -261,10 +276,12 @@ def blackjack(debug=False, file=""):
         if dealersum < 22:
             if dealersum > playersum:
                 print ("dealer wins!")
+                f.write("\ndealer wins!\n")
                 coins = coins - bet
                 losses += 1
             if dealersum == playersum:
                 print ('push')
+                f.write('\npush\n')
             if dealersum < playersum:
                 wins += 1
                 coins += bet
