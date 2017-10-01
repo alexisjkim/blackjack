@@ -2,131 +2,192 @@
 
 0
 
-dealer card:J
-dealer card:J
-player card:10
-player card: 10
-dealer card: 10
-dealer card: 10
+Round 1, event 1:       player cards are: (4, 'diamond'), (2, 'spade')   dealer cards are (4, 'spade') and ?
+playersum:6   dealersum: 7
+player hit and got:(2, 'spade')
+player hit and got:(3, 'club')
+player hit and got:(4, 'heart')
+player hit and got:(3, 'diamond')
 
-playersum:20dealersum:20push
+dealer hit and got:(4, 'spade')
+
+dealer hit and got:(4, 'spade')
+
+dealer hit and got:(2, 'heart')
+player won
 
 
 1
 
-player card:5
-player card: 4
-dealer card: 5
-dealer card: 9
+Round 1, event 1:       player cards are: (2, 'diamond'), (4, 'club')   dealer cards are (3, 'club') and ?
+playersum:6   dealersum: 7
+player hit and got:(3, 'heart')
+player hit and got:(2, 'heart')
+player hit and got:(3, 'spade')
+player hit and got:(2, 'heart')
+player hit and got:(3, 'spade')
 
-playersum:9dealersum:14player hit and got:4
-player hit and got:5
+dealer hit and got:(2, 'club')
 
-dealer hit and got:3
+dealer hit and got:(2, 'club')
+
+dealer hit and got:(4, 'spade')
+
+dealer hit and got:(3, 'heart')
 player won
 
 
 2
 
-player card:K
-dealer card:J
-player card:7
-player card: 10
-dealer card: 10
-dealer card: 10
+Round 1, event 1:       player cards are: (3, 'heart'), (3, 'club')   dealer cards are (2, 'heart') and ?
+playersum:6   dealersum: 6
+player hit and got:(2, 'heart')
+player hit and got:(4, 'diamond')
+player hit and got:(2, 'heart')
+player hit and got:(4, 'club')
 
-playersum:17dealersum:20dealer won
+dealer hit and got:(4, 'heart')
+
+dealer hit and got:(3, 'diamond')
+
+dealer hit and got:(3, 'heart')
+
+dealer hit and got:(4, 'spade')
+dealer won
 
 
 3
 
-player card:Q
-dealer card:Q
-player card:10
-player card: 6
-dealer card: 10
-dealer card: 10
+Round 1, event 1:       player cards are: (4, 'diamond'), (3, 'heart')   dealer cards are (3, 'heart') and ?
+playersum:7   dealersum: 6
+player hit and got:(3, 'spade')
+player hit and got:(4, 'heart')
+player hit and got:(2, 'heart')
+player hit and got:(4, 'diamond')
 
-playersum:16dealersum:20player hit and got:4
-push
+dealer hit and got:(2, 'heart')
+
+dealer hit and got:(4, 'heart')
+
+dealer hit and got:(3, 'diamond')
+
+dealer hit and got:(3, 'diamond')
+player won
 
 
 4
 
-player card:8
-player card: 7
-dealer card: 2
-dealer card: 5
+Round 1, event 1:       player cards are: (4, 'spade'), (3, 'spade')   dealer cards are (3, 'diamond') and ?
+playersum:7   dealersum: 6
+player hit and got:(3, 'heart')
+player hit and got:(4, 'spade')
+player hit and got:(3, 'spade')
 
-playersum:15dealersum:7player hit and got:2
+dealer hit and got:(2, 'club')
 
-dealer hit and got:2
+dealer hit and got:(2, 'club')
 
-dealer hit and got:4
+dealer hit and got:(2, 'spade')
 
-dealer hit and got:10
-dealer busted
+dealer hit and got:(4, 'club')
+
+dealer hit and got:(4, 'diamond')
+dealer won
 
 
 5
 
-dealer card:A
-player card:4
-player card: 8
-dealer card: 11
-dealer card: 5
+Round 1, event 1:       player cards are: (3, 'spade'), (4, 'diamond')   dealer cards are (4, 'heart') and ?
+playersum:7   dealersum: 7
+player hit and got:(3, 'diamond')
+player hit and got:(3, 'diamond')
+player hit and got:(4, 'diamond')
 
-playersum:12dealersum:16player hit and got:8
+dealer hit and got:(4, 'spade')
 
-dealer hit and got:10
-dealer busted
+dealer hit and got:(4, 'club')
+
+dealer hit and got:(4, 'spade')
+dealer won
 
 
 6
 
-player cardA
-dealer card:K
-player card:11
-player card: 7
-dealer card: 7
-dealer card: 10
+Round 1, event 1:       player cards are: (3, 'spade'), (4, 'diamond')   dealer cards are (4, 'club') and ?
+playersum:7   dealersum: 6
+player hit and got:(2, 'club')
+player hit and got:(3, 'club')
+player hit and got:(2, 'heart')
+player hit and got:(2, 'spade')
+player hit and got:(3, 'spade')
 
-playersum:18dealersum:17player won
+dealer hit and got:(3, 'diamond')
+
+dealer hit and got:(2, 'club')
+
+dealer hit and got:(2, 'heart')
+
+dealer hit and got:(4, 'spade')
+player won
 
 
 7
 
-player card:Q
-dealer card:K
-player card:10
-player card: 8
-dealer card: 10
-dealer card: 10
+Round 1, event 1:       player cards are: (4, 'heart'), (4, 'heart')   dealer cards are (2, 'spade') and ?
+playersum:8   dealersum: 4
+player hit and got:(2, 'spade')
+player hit and got:(3, 'diamond')
+player hit and got:(2, 'heart')
+player hit and got:(4, 'heart')
 
-playersum:18dealersum:20dealer won
+dealer hit and got:(4, 'heart')
+
+dealer hit and got:(2, 'diamond')
+
+dealer hit and got:(3, 'heart')
+
+dealer hit and got:(4, 'diamond')
+player won
 
 
 8
 
-player card:9
-player card: 9
-dealer card: 5
-dealer card: 10
+Round 1, event 1:       player cards are: (4, 'diamond'), (3, 'spade')   dealer cards are (3, 'spade') and ?
+playersum:7   dealersum: 5
+player hit and got:(3, 'club')
+player hit and got:(2, 'heart')
+player hit and got:(4, 'heart')
+player hit and got:(3, 'club')
 
-playersum:18dealersum:15
-dealer hit and got:2
-player won
+dealer hit and got:(2, 'spade')
+
+dealer hit and got:(2, 'club')
+
+dealer hit and got:(2, 'spade')
+
+dealer hit and got:(2, 'spade')
+
+dealer hit and got:(3, 'club')
+
+dealer hit and got:(4, 'spade')
+dealer won
 
 
 9
 
-player card:Q
-player card:3
-player card: 10
-dealer card: 4
-dealer card: 10
+Round 1, event 1:       player cards are: (4, 'club'), (4, 'spade')   dealer cards are (2, 'heart') and ?
+playersum:8   dealersum: 4
+player hit and got:(3, 'club')
+player hit and got:(2, 'club')
+player hit and got:(4, 'spade')
 
-playersum:13dealersum:14player hit and got:9
+dealer hit and got:(2, 'club')
 
-dealer hit and got:10
-player busted
+dealer hit and got:(2, 'club')
+
+dealer hit and got:(4, 'club')
+
+dealer hit and got:(3, 'diamond')
+
+dealer hit and got:(4, 'heart')
+dealer won
