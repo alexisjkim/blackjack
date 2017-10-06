@@ -5,62 +5,209 @@ New Game
 You have 5000 coins.
 
 your bet: 100
-The dealer's up card is(4, 'spade')and your cards are(4, 'diamond')and(2, 'spade')
+The dealer's up card is(4, 'heart')and your cards are(3, 'heart')and(3, 'heart')
+player hit and got: (3, 'diamond')
+	Player sum: 9
+player hit and got: (2, 'spade')
+	Player sum: 11
+player hit and got: (4, 'heart')
+	Player sum: 15
+player hit and got: (4, 'diamond')
+	Player sum: 19
+dealer hit and got:(2, 'spade')
+	Dealer sum:9
+dealer hit and got:(2, 'diamond')
+	Dealer sum:11
+dealer hit and got:(2, 'club')
+	Dealer sum:13
+dealer hit and got:(3, 'spade')
+	Dealer sum:16
+dealer hit and got:(2, 'club')
+	Dealer sum:18wins, losses:1, 0
+
+New Game
+You have 5100 coins.
+
+your bet: 100
+The dealer's up card is(2, 'spade')and your cards are(2, 'club')and(4, 'diamond')
+player hit and got: (2, 'club')
+	Player sum: 8
+player hit and got: (3, 'heart')
+	Player sum: 11
+player hit and got: (3, 'diamond')
+	Player sum: 14
+player hit and got: (3, 'club')
+	Player sum: 17
+dealer hit and got:(4, 'club')
+	Dealer sum:9
+dealer hit and got:(2, 'club')
+	Dealer sum:11
+dealer hit and got:(4, 'spade')
+	Dealer sum:15
+dealer hit and got:(3, 'club')
+	Dealer sum:18
 dealer wins!
-wins, losses:0, 1
+wins, losses:1, 1
 
 New Game
-You have 4900 coins.
+You have 5000 coins.
 
 your bet: 100
-The dealer's up card is(4, 'heart')and your cards are(2, 'spade')and(3, 'club')
+The dealer's up card is(4, 'club')and your cards are(3, 'diamond')and(3, 'diamond')
+player hit and got: (2, 'club')
+	Player sum: 8
+player hit and got: (4, 'diamond')
+	Player sum: 12
+player hit and got: (3, 'diamond')
+	Player sum: 15
+player hit and got: (4, 'club')
+	Player sum: 19
+dealer hit and got:(3, 'heart')
+	Dealer sum:10
+dealer hit and got:(4, 'diamond')
+	Dealer sum:14
+dealer hit and got:(3, 'club')
+	Dealer sum:17wins, losses:2, 1
+
+New Game
+You have 5100 coins.
+
+your bet: 100
+The dealer's up card is(4, 'club')and your cards are(3, 'spade')and(4, 'diamond')
+player hit and got: (3, 'diamond')
+	Player sum: 10
+player hit and got: (3, 'spade')
+	Player sum: 13
+player hit and got: (4, 'diamond')
+	Player sum: 17
+dealer hit and got:(3, 'club')
+	Dealer sum:11
+dealer hit and got:(2, 'diamond')
+	Dealer sum:13
+dealer hit and got:(3, 'club')
+	Dealer sum:16
+dealer hit and got:(4, 'heart')
+	Dealer sum:20
 dealer wins!
-wins, losses:0, 2
+wins, losses:2, 2
 
 New Game
-You have 4800 coins.
+You have 5000 coins.
 
 your bet: 100
-The dealer's up card is(2, 'heart')and your cards are(4, 'spade')and(4, 'spade')wins, losses:1, 2
+The dealer's up card is(4, 'spade')and your cards are(2, 'spade')and(2, 'diamond')
+player hit and got: (4, 'heart')
+	Player sum: 8
+player hit and got: (3, 'heart')
+	Player sum: 11
+player hit and got: (4, 'diamond')
+	Player sum: 15
+player hit and got: (3, 'diamond')
+	Player sum: 18
+dealer hit and got:(3, 'spade')
+	Dealer sum:11
+dealer hit and got:(3, 'diamond')
+	Dealer sum:14
+dealer hit and got:(2, 'heart')
+	Dealer sum:16
+dealer hit and got:(2, 'club')
+	Dealer sum:18push
+wins, losses:2, 2
 
 New Game
-You have 4900 coins.
+You have 5000 coins.
 
 your bet: 100
-The dealer's up card is(4, 'club')and your cards are(4, 'club')and(3, 'club')push
-wins, losses:1, 2
-
-New Game
-You have 4900 coins.
-
-your bet: 100
-The dealer's up card is(2, 'heart')and your cards are(2, 'heart')and(3, 'spade')push
-wins, losses:1, 2
-
-New Game
-You have 4900 coins.
-
-your bet: 100
-The dealer's up card is(4, 'spade')and your cards are(2, 'club')and(2, 'club')
+The dealer's up card is(2, 'spade')and your cards are(3, 'heart')and(2, 'spade')
+player hit and got: (2, 'heart')
+	Player sum: 7
+player hit and got: (3, 'club')
+	Player sum: 10
+player hit and got: (2, 'club')
+	Player sum: 12
+player hit and got: (4, 'spade')
+	Player sum: 16
+player hit and got: (2, 'heart')
+	Player sum: 18
+dealer hit and got:(2, 'diamond')
+	Dealer sum:7
+dealer hit and got:(2, 'heart')
+	Dealer sum:9
+dealer hit and got:(4, 'spade')
+	Dealer sum:13
+dealer hit and got:(2, 'club')
+	Dealer sum:15
+dealer hit and got:(4, 'diamond')
+	Dealer sum:19
 dealer wins!
-wins, losses:1, 3
+wins, losses:2, 3
 
 New Game
-You have 4800 coins.
+You have 4900 coins.
 
 your bet: 100
-The dealer's up card is(2, 'heart')and your cards are(3, 'heart')and(3, 'club')push
-wins, losses:1, 3
+The dealer's up card is(2, 'diamond')and your cards are(4, 'club')and(2, 'diamond')
+player hit and got: (4, 'spade')
+	Player sum: 10
+player hit and got: (3, 'spade')
+	Player sum: 13
+player hit and got: (2, 'spade')
+	Player sum: 15
+player hit and got: (3, 'diamond')
+	Player sum: 18
+dealer hit and got:(2, 'spade')
+	Dealer sum:6
+dealer hit and got:(2, 'spade')
+	Dealer sum:8
+dealer hit and got:(3, 'diamond')
+	Dealer sum:11
+dealer hit and got:(4, 'heart')
+	Dealer sum:15
+dealer hit and got:(2, 'heart')
+	Dealer sum:17wins, losses:3, 3
 
 New Game
-You have 4800 coins.
+You have 5000 coins.
 
 your bet: 100
-The dealer's up card is(2, 'heart')and your cards are(2, 'heart')and(4, 'diamond')push
-wins, losses:1, 3
+The dealer's up card is(3, 'spade')and your cards are(2, 'diamond')and(4, 'heart')
+player hit and got: (4, 'diamond')
+	Player sum: 10
+player hit and got: (4, 'diamond')
+	Player sum: 14
+player hit and got: (3, 'diamond')
+	Player sum: 17
+dealer hit and got:(4, 'spade')
+	Dealer sum:11
+dealer hit and got:(2, 'spade')
+	Dealer sum:13
+dealer hit and got:(3, 'heart')
+	Dealer sum:16
+dealer hit and got:(3, 'spade')
+	Dealer sum:19
+dealer wins!
+wins, losses:3, 4
 
 New Game
-You have 4800 coins.
+You have 4900 coins.
 
 your bet: 100
-The dealer's up card is(3, 'heart')and your cards are(4, 'heart')and(3, 'diamond')push
+The dealer's up card is(2, 'heart')and your cards are(2, 'heart')and(4, 'spade')
+player hit and got: (3, 'heart')
+	Player sum: 9
+player hit and got: (2, 'club')
+	Player sum: 11
+player hit and got: (2, 'spade')
+	Player sum: 13
+player hit and got: (3, 'heart')
+	Player sum: 16
+player hit and got: (4, 'diamond')
+	Player sum: 20
+dealer hit and got:(4, 'club')
+	Dealer sum:10
+dealer hit and got:(2, 'heart')
+	Dealer sum:12
+dealer hit and got:(4, 'heart')
+	Dealer sum:16
+dealer hit and got:(3, 'heart')
+	Dealer sum:19

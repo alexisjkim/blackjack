@@ -26,7 +26,7 @@ def blackjack(debug, file=""):
     wins = 0
     message("Welcome to Blackjack! ^^ My name is Luna and I will be your dealer for today.\nType 'quit' anytime if you would like to quit.",True,f)
     import random
-    random.seed(1)
+    #random.seed(1)
     if debug == False:
         decks = eval(input("How many decks would you like?"))
     elif debug == True:
@@ -101,14 +101,15 @@ def blackjack(debug, file=""):
         playersum = a[0] + b[0]
         while True:
             if debug == True:
-                while playersum > 17:
+                while playersum < 17:
                     hit = list.pop()
-                    message('player hit and got: '+hit,message_argument, f)
+                    message('\nplayer hit and got: '+str(hit),message_argument, f)
                     if hit[0] == 'J' or hit[0] == 'Q' or hit[0] == 'K':
                         hit[0] = 10
                     if hit[0] == 'A':
                         hit[0] = 11
-                    playersum += hit
+                    playersum += hit[0]
+                    message('\n\tPlayer sum: ' + str(playersum), message_argument, f)
 
                 break
             if debug == False:
@@ -185,14 +186,15 @@ def blackjack(debug, file=""):
                         coins = coins - bet
                         break
         dealersum = dealer1[0] + dealer2[0]
-        while dealersum > 17:
+        while dealersum < 17:
             hit = list.pop()
-            message('dealer hit and got:' + hit, message_argument, f)
+            message('\ndealer hit and got:' + str(hit), message_argument, f)
             if hit[0] == 'J' or hit[0] == 'Q' or hit[0] == 'K':
                 hit[0] = 10
             if hit[0] == 'A':
                 hit[0] = 11
-            dealersum += hit
+            dealersum += hit[0]
+            message('\n\tDealer sum:' + str(dealersum), message_argument, f)
         if playersum > 21:
             message('\nyou busted\n',message_argument,f)
             coins = coins - bet
