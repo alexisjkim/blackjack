@@ -1,193 +1,66 @@
+Welcome to Blackjack! ^^ My name is Luna and I will be your dealer for today.
+Type 'quit' anytime if you would like to quit.wins, losses:0, 0
 
+New Game
+You have 5000 coins.
 
-0
+your bet: 100
+The dealer's up card is(4, 'spade')and your cards are(4, 'diamond')and(2, 'spade')
+dealer wins!
+wins, losses:0, 1
 
-Round 1, event 1:       player cards are: (4, 'diamond'), (2, 'spade')   dealer cards are (4, 'spade') and ?
-playersum:6   dealersum: 7
-player hit and got:(2, 'spade')
-player hit and got:(3, 'club')
-player hit and got:(4, 'heart')
-player hit and got:(3, 'diamond')
+New Game
+You have 4900 coins.
 
-dealer hit and got:(4, 'spade')
+your bet: 100
+The dealer's up card is(4, 'heart')and your cards are(2, 'spade')and(3, 'club')
+dealer wins!
+wins, losses:0, 2
 
-dealer hit and got:(4, 'spade')
+New Game
+You have 4800 coins.
 
-dealer hit and got:(2, 'heart')
-player won
+your bet: 100
+The dealer's up card is(2, 'heart')and your cards are(4, 'spade')and(4, 'spade')wins, losses:1, 2
 
+New Game
+You have 4900 coins.
 
-1
+your bet: 100
+The dealer's up card is(4, 'club')and your cards are(4, 'club')and(3, 'club')push
+wins, losses:1, 2
 
-Round 1, event 1:       player cards are: (2, 'diamond'), (4, 'club')   dealer cards are (3, 'club') and ?
-playersum:6   dealersum: 7
-player hit and got:(3, 'heart')
-player hit and got:(2, 'heart')
-player hit and got:(3, 'spade')
-player hit and got:(2, 'heart')
-player hit and got:(3, 'spade')
+New Game
+You have 4900 coins.
 
-dealer hit and got:(2, 'club')
+your bet: 100
+The dealer's up card is(2, 'heart')and your cards are(2, 'heart')and(3, 'spade')push
+wins, losses:1, 2
 
-dealer hit and got:(2, 'club')
+New Game
+You have 4900 coins.
 
-dealer hit and got:(4, 'spade')
+your bet: 100
+The dealer's up card is(4, 'spade')and your cards are(2, 'club')and(2, 'club')
+dealer wins!
+wins, losses:1, 3
 
-dealer hit and got:(3, 'heart')
-player won
+New Game
+You have 4800 coins.
 
+your bet: 100
+The dealer's up card is(2, 'heart')and your cards are(3, 'heart')and(3, 'club')push
+wins, losses:1, 3
 
-2
+New Game
+You have 4800 coins.
 
-Round 1, event 1:       player cards are: (3, 'heart'), (3, 'club')   dealer cards are (2, 'heart') and ?
-playersum:6   dealersum: 6
-player hit and got:(2, 'heart')
-player hit and got:(4, 'diamond')
-player hit and got:(2, 'heart')
-player hit and got:(4, 'club')
+your bet: 100
+The dealer's up card is(2, 'heart')and your cards are(2, 'heart')and(4, 'diamond')push
+wins, losses:1, 3
 
-dealer hit and got:(4, 'heart')
+New Game
+You have 4800 coins.
 
-dealer hit and got:(3, 'diamond')
-
-dealer hit and got:(3, 'heart')
-
-dealer hit and got:(4, 'spade')
-dealer won
-
-
-3
-
-Round 1, event 1:       player cards are: (4, 'diamond'), (3, 'heart')   dealer cards are (3, 'heart') and ?
-playersum:7   dealersum: 6
-player hit and got:(3, 'spade')
-player hit and got:(4, 'heart')
-player hit and got:(2, 'heart')
-player hit and got:(4, 'diamond')
-
-dealer hit and got:(2, 'heart')
-
-dealer hit and got:(4, 'heart')
-
-dealer hit and got:(3, 'diamond')
-
-dealer hit and got:(3, 'diamond')
-player won
-
-
-4
-
-Round 1, event 1:       player cards are: (4, 'spade'), (3, 'spade')   dealer cards are (3, 'diamond') and ?
-playersum:7   dealersum: 6
-player hit and got:(3, 'heart')
-player hit and got:(4, 'spade')
-player hit and got:(3, 'spade')
-
-dealer hit and got:(2, 'club')
-
-dealer hit and got:(2, 'club')
-
-dealer hit and got:(2, 'spade')
-
-dealer hit and got:(4, 'club')
-
-dealer hit and got:(4, 'diamond')
-dealer won
-
-
-5
-
-Round 1, event 1:       player cards are: (3, 'spade'), (4, 'diamond')   dealer cards are (4, 'heart') and ?
-playersum:7   dealersum: 7
-player hit and got:(3, 'diamond')
-player hit and got:(3, 'diamond')
-player hit and got:(4, 'diamond')
-
-dealer hit and got:(4, 'spade')
-
-dealer hit and got:(4, 'club')
-
-dealer hit and got:(4, 'spade')
-dealer won
-
-
-6
-
-Round 1, event 1:       player cards are: (3, 'spade'), (4, 'diamond')   dealer cards are (4, 'club') and ?
-playersum:7   dealersum: 6
-player hit and got:(2, 'club')
-player hit and got:(3, 'club')
-player hit and got:(2, 'heart')
-player hit and got:(2, 'spade')
-player hit and got:(3, 'spade')
-
-dealer hit and got:(3, 'diamond')
-
-dealer hit and got:(2, 'club')
-
-dealer hit and got:(2, 'heart')
-
-dealer hit and got:(4, 'spade')
-player won
-
-
-7
-
-Round 1, event 1:       player cards are: (4, 'heart'), (4, 'heart')   dealer cards are (2, 'spade') and ?
-playersum:8   dealersum: 4
-player hit and got:(2, 'spade')
-player hit and got:(3, 'diamond')
-player hit and got:(2, 'heart')
-player hit and got:(4, 'heart')
-
-dealer hit and got:(4, 'heart')
-
-dealer hit and got:(2, 'diamond')
-
-dealer hit and got:(3, 'heart')
-
-dealer hit and got:(4, 'diamond')
-player won
-
-
-8
-
-Round 1, event 1:       player cards are: (4, 'diamond'), (3, 'spade')   dealer cards are (3, 'spade') and ?
-playersum:7   dealersum: 5
-player hit and got:(3, 'club')
-player hit and got:(2, 'heart')
-player hit and got:(4, 'heart')
-player hit and got:(3, 'club')
-
-dealer hit and got:(2, 'spade')
-
-dealer hit and got:(2, 'club')
-
-dealer hit and got:(2, 'spade')
-
-dealer hit and got:(2, 'spade')
-
-dealer hit and got:(3, 'club')
-
-dealer hit and got:(4, 'spade')
-dealer won
-
-
-9
-
-Round 1, event 1:       player cards are: (4, 'club'), (4, 'spade')   dealer cards are (2, 'heart') and ?
-playersum:8   dealersum: 4
-player hit and got:(3, 'club')
-player hit and got:(2, 'club')
-player hit and got:(4, 'spade')
-
-dealer hit and got:(2, 'club')
-
-dealer hit and got:(2, 'club')
-
-dealer hit and got:(4, 'club')
-
-dealer hit and got:(3, 'diamond')
-
-dealer hit and got:(4, 'heart')
-dealer won
+your bet: 100
+The dealer's up card is(3, 'heart')and your cards are(4, 'heart')and(3, 'diamond')push
