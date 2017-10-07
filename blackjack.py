@@ -1,8 +1,9 @@
 def deck(n):
     onedeck = []
-    for num in [2, 3, 4]:
+    for num in [2, 3, 4,5,6,7,8,9,10,'J','Q','K','A']:
         for suit in ['heart', 'spade','club','diamond']:
-            onedeck.append( (num, suit)  )
+            minideck = [num,suit]
+            onedeck.append(minideck)
     alldecks = []
     for i in range(n):
         alldecks.extend(onedeck)
@@ -20,7 +21,6 @@ message_argument = True
 def blackjack(debug, file=""):
     f = open('log.txt','w')
     #message(str(deck(1)),message_argument,f
-
     losses = 0
     coins = 5000
     wins = 0
@@ -30,9 +30,11 @@ def blackjack(debug, file=""):
     if debug == False:
         decks = eval(input("How many decks would you like?"))
     elif debug == True:
-        decks = 100
+        decks = 50
     list = deck(decks)
     random.shuffle(list)
+    if debug == True:
+        message(str(list),message_argument,f)
     debugcount = 0
     while True:
         if debug == True:
@@ -66,6 +68,7 @@ def blackjack(debug, file=""):
         dealer1 = list.pop()
         dealer2 = list.pop()
         message ("\nThe dealer's up card is" + str(dealer1)+ "and your cards are"+ str(a)+"and"+ str(b),message_argument,f)
+        print ('dealer1'+str(dealer1),message_argument,f)
         if a[0] == 'J' or a[0] == 'Q' or a[0] == 'K':
             a[0] = 10
         if b[0] == 'J' or b[0] == 'Q' or b[0] == 'K':
@@ -221,10 +224,3 @@ def blackjack(debug, file=""):
 
 a = blackjack(debug=True, file="log.txt")
 print (a)
-'''
-to do list
-
-fix coin thing
-suits (spades, hearts, clubs, diamonds)
-
-'''
