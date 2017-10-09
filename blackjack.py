@@ -24,19 +24,34 @@ def blackjack(debug, file=""):
     losses = 0
     coins = 5000
     wins = 0
+    rounds = 0
     message("Welcome to Blackjack! ^^ My name is Luna and I will be your dealer for today.\nType 'quit' anytime if you would like to quit.",True,f)
     import random
     #random.seed(1)
     if debug == False:
         decks = eval(input("How many decks would you like?"))
     elif debug == True:
-        decks = 50
+        decks = 1
     list = deck(decks)
     random.shuffle(list)
-    if debug == True:
-        message(str(list),message_argument,f)
     debugcount = 0
     while True:
+        if debug == True:
+            if len(list) < 6:
+                message('\nout of cards, shuffling\n',message_argument,f)
+                list = deck(decks)
+                random.shuffle(list)
+        if rounds == 20:
+            break
+        rounds += 1
+        if debug == True:
+            #listreverse = list[::-1]
+            numcards = len(list)
+            numiter = numcards // 5
+            for i in range(numiter):
+                message ('\n' + str(list[i*5:(i+1)*5]), message_argument, f)
+            if numcards % 5 != 0:
+                message ('n' + str(list[(numiter)*5::]) , message_argument, f)
         if debug == True:
             debugcount += 1
         if debugcount == 10:
@@ -62,7 +77,7 @@ def blackjack(debug, file=""):
             message("\nout of cards, shuffling \n",message_argument,f)
             list = deck(decks)
             random.shuffle(list)
-            continue
+
         a = list.pop()
         b = list.pop()
         dealer1 = list.pop()
@@ -189,6 +204,12 @@ def blackjack(debug, file=""):
                         coins = coins - bet
                         break
         dealersum = dealer1[0] + dealer2[0]
+        if playersum > 21:
+            message('\nyou busted\n',message_argument,f)
+            coins = coins - bet
+            losses += 1
+            continue
+        message('\ndealer down card was: '+str(dealer2),message_argument,f)
         while dealersum < 17:
             hit = list.pop()
             message('\ndealer hit and got:' + str(hit), message_argument, f)
